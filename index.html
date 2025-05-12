@@ -44,21 +44,30 @@
       margin-top: 1.5rem;
       font-size: 0.95rem;
       opacity: 0.6;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
+    
+    .dots {
+      display: inline-block;
+      width: 3ch; /* 3 karakterlik boşluk, sabit */
+      text-align: left;
+    }
+    
     .dots::after {
       content: '';
-      display: inline-block;
-      width: 1ch;
-      animation: dots 1s steps(3, end) infinite;
+      animation: typingDots 1.2s steps(3, end) infinite;
     }
-
-    @keyframes dots {
-      0% { content: ''; }
-      33% { content: '.'; }
-      66% { content: '..'; }
+    
+    @keyframes typingDots {
+      0%   { content: ''; }
+      33%  { content: '.'; }
+      66%  { content: '..'; }
       100% { content: '...'; }
     }
+
 
   </style>
 </head>
@@ -68,8 +77,8 @@
     Luna was the gaze. Ditu became the path. Dituworks is the answer in between.
   </p>
   <p class="signal">
-  Signal incoming<span class="dots">...</span>
-  </p>
+  <span class="static-text">Signal incoming</span><span class="dots"></span>
+</p>
   <footer>
     &copy; 2025 John K.
   </footer>
