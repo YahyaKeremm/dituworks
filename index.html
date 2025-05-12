@@ -40,12 +40,35 @@
       font-size: 0.9rem;
       opacity: 0.5;
     }
+    .signal {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      opacity: 0.6;
+    }
+
+    .dots::after {
+      content: '';
+      display: inline-block;
+      width: 1ch;
+      animation: dots 1s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ''; }
+      33% { content: '.'; }
+      66% { content: '..'; }
+      100% { content: '...'; }
+    }
+
   </style>
 </head>
 <body>
   <h1>Dituworks</h1>
   <p>
     Luna was the gaze. Ditu became the path. Dituworks is the answer in between.
+  </p>
+  <p class="signal">
+  Signal incoming<span class="dots">...</span>
   </p>
   <footer>
     &copy; 2025 John K.
